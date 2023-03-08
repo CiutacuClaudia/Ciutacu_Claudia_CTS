@@ -1,13 +1,15 @@
 package cts.s02.principii_clean_code.clase;
 
+import java.util.Arrays;
+
 public abstract class Aplicant{
 	protected String nume;
 	protected String prenume;
 	protected int varsta;
 	protected int punctaj;
-	protected int nr_proiecte;
+	protected int numarProiecte;
 	protected String[] denumireProiect;
-	
+	private static int pragPunctaj;
 	
 	public String getNume() {
 		return nume;
@@ -27,11 +29,8 @@ public abstract class Aplicant{
 	public void setVarsta(int varsta) {
 		this.varsta = varsta;
 	}
-	public void statut(){
-		if(punctaj>80)
-			System.out.println("Aplicantul "+nume+" "+prenume+" a fost acceptat.");
-		else
-			System.out.println("Aplicantul "+nume+" "+prenume+" nu a fost acceptat.");
+	public void afisareStatus(){
+		System.out.println("Aplicantul "+nume+" "+prenume+(this.punctaj > Aplicant.pragPunctaj ? "": " nu " ) + "a fost acceptat.");
 		}
 	public int getPunctaj() {
 		return punctaj;
@@ -53,14 +52,33 @@ public abstract class Aplicant{
 		this.prenume = prenume;
 		this.varsta = varsta;
 		this.punctaj = punctaj;
-		this.nr_proiecte = nr_proiecte;
+		this.numarProiecte = nr_proiecte;
 		this.denumireProiect = denumireProiect;
 	}
 	public int getNr_proiecte() {
-		return nr_proiecte;
+		return numarProiecte;
 	}
 	public void setNr_proiecte(int nr_proiecte) {
-		this.nr_proiecte = nr_proiecte;
+		this.numarProiecte = nr_proiecte;
 	}
 
+	@Override
+	public String toString() {
+		final StringBuffer sb = new StringBuffer();
+		sb.append("nume='").append(nume).append('\'');
+		sb.append(", prenume='").append(prenume).append('\'');
+		sb.append(", varsta=").append(varsta);
+		sb.append(", punctaj=").append(punctaj);
+		sb.append(", nr_proiecte=").append(numarProiecte);
+		sb.append(", denumireProiect=").append(denumireProiect == null ? "null" : Arrays.asList(denumireProiect).toString());
+		return sb.toString();
+	}
+
+	public void set_numarProiecte(int numarProiecte, String[] denumireProiect){
+		this.numarProiecte= numarProiecte;
+		this.denumireProiect=denumireProiect;
+		for(int i=0;i<numarProiecte;i++){
+			this.denumireProiect= denumireProiect;
+		}
+	}
 }
