@@ -1,8 +1,8 @@
-package src.cts.s02.principii_clean_code.clase.readers;
+package cts.s02.principii_clean_code.clase.readers;
 
-import src.cts.s02.principii_clean_code.clase.Angajat;
-import src.cts.s02.principii_clean_code.clase.Aplicant;
-import src.cts.s02.principii_clean_code.clase.Elev;
+import cts.s02.principii_clean_code.clase.Angajat;
+import cts.s02.principii_clean_code.clase.Aplicant;
+import cts.s02.principii_clean_code.clase.Elev;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,6 +1,6 @@
-package src.cts.s02.principii_clean_code.clase.readers;
+package cts.s02.principii_clean_code.clase.readers;
 
-import src.cts.s02.principii_clean_code.clase.Aplicant;
+import cts.s02.principii_clean_code.clase.Aplicant;
 
 import java.io.FileNotFoundException;
 import java.util.List;
