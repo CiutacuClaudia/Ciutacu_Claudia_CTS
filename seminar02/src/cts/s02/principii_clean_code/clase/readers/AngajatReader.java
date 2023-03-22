@@ -1,7 +1,8 @@
-package cts.s02.principii_clean_code.clase.readers;
+package src.cts.s02.principii_clean_code.clase.readers;
 
-import cts.s02.principii_clean_code.clase.Angajat;
-import cts.s02.principii_clean_code.clase.Aplicant;
+import src.cts.s02.principii_clean_code.clase.Angajat;
+import src.cts.s02.principii_clean_code.clase.Aplicant;
+import src.cts.s02.principii_clean_code.clase.Elev;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,18 +16,20 @@ public class AngajatReader extends AplicantReader {
     public List<Aplicant> readAplicants(String fileName) throws FileNotFoundException {
         Scanner input2 = new Scanner(new File(fileName));
         input2.useDelimiter(",");
-        List<Aplicant> angajati = new ArrayList<Aplicant>();
+        List<Aplicant> aplicants = new ArrayList<Aplicant>();
 
         while (input2.hasNext()) {
             Angajat angajat = new Angajat();
             super.readAplicant(input2, angajat);
             int salariu = input2.nextInt();
             String ocupatie = input2.next();
+
             angajat.setSalariu(salariu);
             angajat.setOcupatie(ocupatie);
-            angajati.add(angajat);
+
+            aplicants.add(angajat);
         }
         input2.close();
-        return angajati;
+        return aplicants;
     }
 }
