@@ -1,4 +1,4 @@
-package builder.clase;
+package builder.model;
 
 public class ContBuilder implements IBuilder {
 

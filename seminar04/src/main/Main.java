@@ -1,20 +1,21 @@
 package main;
 
-import singletonRegistry.InstitutiePublica;
+import singleton.classes.BazaDate;
+import singleton.classes.Secretariat;
 
 public class Main {
+    public static void main(String[] args) {
+        Secretariat secretariat1 = Secretariat.getInstanta(1111, 10);
+        Secretariat secretariat2 = Secretariat.getInstanta(2222, 20);
 
-    public static void main(String[] args){
-        InstitutiePublica politie=InstitutiePublica.getInstitutieOptimizat("Politie");
-        InstitutiePublica pompieri=InstitutiePublica.getInstitutieOptimizat("Pompieri");
-        InstitutiePublica politieLocala=InstitutiePublica.getInstitutieOptimizat("Politie");
+        System.out.println(secretariat1);
+        System.out.println(secretariat2);
 
-        politie.setNumarAngajati(10);
-        politieLocala.setNumarAngajati(20);
-        pompieri.setNumarAngajati(5);
-
-        System.out.println(politieLocala);
-        System.out.println(politie);
-        System.out.println(pompieri);
+        BazaDate bazaDate1 = BazaDate.getInstanta();
+        BazaDate bazaDate2 = BazaDate.getInstanta();
+        bazaDate1.setDimensiuneDate(200);
+        bazaDate2.setDimensiuneDate(300);
+        System.out.println(bazaDate1);
+        System.out.println(bazaDate2);
     }
 }

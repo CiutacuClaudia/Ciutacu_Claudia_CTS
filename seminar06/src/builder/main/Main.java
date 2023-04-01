@@ -1,9 +1,9 @@
 package builder.main;
 
-import builder.clase.ContBancar;
-import builder.clase.ContBancarBuilder;
-import builder.clase.ContBuilder;
-import builder.clase.IBuilder;
+import builder.model.ContBancar;
+import builder.model.ContBancarBuilder;
+import builder.model.ContBuilder;
+import builder.model.IBuilder;
 
 public class Main {
     public static void main(String[] args) {
