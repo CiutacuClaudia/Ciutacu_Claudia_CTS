@@ -1,5 +1,7 @@
 package singleton.classes;
 
+
+//Eager initialization - este creata la inceput o instanta chiar daca nu e folosita
 public class BazaDate {
 
     private int dimensiuneDate;

@@ -5,17 +5,17 @@ public class Secretariat {
     private int numarAngajati;
     private static Secretariat instanta = null ;
 
-    private Secretariat(int numarBirou, int numarAngajati) {
-        this.numarBirou = numarBirou;
-        this.numarAngajati = numarAngajati;
-    }
-
     public synchronized static Secretariat getInstanta(int numarBirou, int numarAngajati) {
         if (instanta == null) {
             Secretariat.instanta = new Secretariat(numarBirou, numarAngajati);
 
         }
         return Secretariat.instanta;
+    }
+
+    private Secretariat(int numarBirou, int numarAngajati) {
+        this.numarBirou = numarBirou;
+        this.numarAngajati = numarAngajati;
     }
 
     @Override
@@ -25,4 +25,5 @@ public class Secretariat {
                 ", numarAngajati=" + numarAngajati +
                 '}';
     }
+
 }

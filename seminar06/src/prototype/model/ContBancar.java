@@ -31,7 +31,7 @@ public class ContBancar implements IContClonable {
     public IContClonable cloneaza() {
         ContBancar contCopie = new ContBancar();
         contCopie.detinator = this.detinator;
-        contCopie.numarFileDosar = numarFileDosar;
+        contCopie.numarFileDosar = this.numarFileDosar;
         contCopie.documents = new HashMap<>();
         for (String key : this.documents.keySet()) {
             contCopie.documents.put(key, this.documents.get(key));
