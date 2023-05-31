@@ -2,7 +2,7 @@ package test;
 
 import model.IPersoana;
 import model.Persoana;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
 
@@ -15,6 +15,7 @@ class PersoanaTest {
         IPersoana persoana = new Persoana("Andrei", "5010218341131");
         assertEquals(22, persoana.getVarsta());
     }
+
 
     @org.junit.jupiter.api.Test
     void getVarstaTestBounderyLimitaSuperioara() {
